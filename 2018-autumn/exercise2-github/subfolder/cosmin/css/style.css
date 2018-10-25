@@ -1,0 +1,731 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.wrap {
+    overflow-x: hidden;
+}
+
+/*--- END Of CSS RESET ---*/
+
+/* --- Start of CSS ---*/
+@font-face {
+    font-family: 'neuton';
+    src: url('../neuton-extrabold.woff') format('woff');
+}
+
+
+body {
+    font-family: neuton;
+    text-shadow: 2px 2px #222;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:focus {
+    color: orange;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+header,
+footer {
+    background-color: #fff998;
+}
+
+.article_wrapper > main {
+    text-shadow: none;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+h2,
+h3 {
+    color: white;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+.title {
+    text-align: center;
+}
+
+.no-shadow {
+    text-shadow: none;
+}
+
+/*--- Mobile Settings ---*/
+
+header {
+    width: 100%;
+    height: 3.5em;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    z-index: 2;
+    box-shadow: 0px 0px 8px 2px #000000;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+}
+
+/*--- Navigator Menu --*/
+
+#navigator {
+    width: auto;
+}
+
+.navigator-list {
+    visibility: hidden;
+    position: absolute;
+    background-color: #fff998;
+    width: 100%;
+    z-index: 3;
+    text-align: center;
+}
+
+.navigator-list a {
+    width: 100%;
+    font-size: 1.1em;
+    font-family: 'neuton';
+    color: white;
+    text-decoration: none;
+}
+
+#navigator ul li {
+    text-align: center;
+    padding: 1em;
+}
+
+#navigator ul li::before {
+    content: "";
+    display: inline-block;
+    height: 1px;
+    width: 10vw;
+    background: white;
+    position: relative;
+    right: 10px;
+    margin-bottom: 5px;
+}
+
+#navigator ul li::after {
+    content: "";
+    display: inline-block;
+    height: 1px;
+    width: 10vw;
+    background: white;
+    position: relative;
+    left: 10px;
+    margin-bottom: 5px;
+}
+
+.navigator-list a:hover {
+    text-decoration: underline;
+}
+
+#navigator:hover .navigator-list {
+    visibility: visible;
+}
+
+.title > h2 {
+    color: black;
+    display: none;
+}
+
+
+.title {
+    width: auto;
+    text-align: center;
+}
+
+#drop-menu {
+    max-width: 100%;
+}
+
+.search {
+    max-width: 100%;
+    height: auto;
+}
+
+/*-- Content of the website --*/
+
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        ". one one ."
+        ". two two ."
+        ". three three."
+        ". . . .";
+}
+
+.container a:first-of-type {
+    grid-area: one;
+    border: 1em solid rgba(140, 164, 232, 0.5);
+}
+
+.container a:nth-last-of-type(2) {
+    grid-area: two;
+    border: 1em solid rgba(232, 223, 140, 0.5);
+}
+
+.container a:last-of-type {
+    grid-area: three;
+    border: 1em solid rgba(248, 87, 87, 0.5);
+}
+
+.container a {
+    width: auto;
+}
+
+.mobile-image {
+    height: 15rem;
+}
+
+.wrapper-article-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.article2_background {
+    background-image: url("../images/jpg-img/hellovintage-main.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 25em;
+    display: flex;
+    padding: 0 0 0.5em 0.5em;
+    align-items: flex-end;
+}
+
+.article2_background > h2 {
+    text-shadow: 2px 2px #000;
+}
+
+.main-image {
+    background-image: url("../images/jpg-img/godbanen-main.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.second-image {
+    background-image: url("../images/jpg-img/hellovintage-main.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.third-image {
+    background-image: url("../images/jpg-img/train-main.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main-article1,
+.main-article2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mobile-image h2,
+h3 {
+    margin-left: 1em;
+}
+
+.mobile-image {
+    padding-top: 1em;
+}
+
+/*-- Footer --*/
+
+footer {
+    margin-top: 1em;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+    margin: 0.5em 1em;
+}
+
+.social > a > img {
+    max-width: 50%;
+}
+
+.copyright {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.copyright span {
+    text-align: center;
+    align-self: center;
+}
+
+/*--- Article Settings ---*/
+#article1_bcg {
+    background-color: rgba(140, 164, 232, 0.5);
+}
+
+.article2_bcg {
+    background-color: rgba(255, 200, 70, 0.5);
+}
+
+.article3_bcg {
+    background-color: rgba(255, 40, 35, 0.5);
+}
+
+
+.article_background {
+    height: 15rem;
+    max-width: 100%;
+    background-image: url('../images/jpg-img/godbanen-main.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.article3_background {
+    height: 25rem;
+    width: 100%;
+    background-image: url('../images/jpg-img/train-main.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+}
+
+.article3_background > h2 {
+    padding: 0 0 0.5em 0.5em;
+}
+
+.article_background > h2 {
+    width: 100%;
+    text-align: left;
+    padding: 0 0 0.5em 0.5em;
+    text-shadow: 2px 2px #222;
+}
+
+.vintage_clothes,
+.rock-photo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.vintage_clothes > img {
+    max-width: 48%;
+    margin: 0.5em;
+}
+
+.rock-photo > img {
+    max-width: 100%;
+    margin: 1em 0;
+}
+
+.summary {
+    font-family: 'calibri';
+    line-height: 1.1em;
+    font-weight: 300;
+    text-align: left;
+}
+
+#summary_unique > p {
+    font-style: italic;
+    font-weight: 700;
+}
+
+.summary > strong {
+    font-weight: 700;
+}
+
+.summary > p {
+    margin: 0.5em 0;
+    padding: 0 0.2em;
+}
+
+.summary > p > strong {
+    font-weight: 700;
+}
+
+.summary > p > span {
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+.summary > ul {
+    list-style-type: circle !important;
+}
+
+#tips {
+    border: 0.2em solid black;
+    padding: 0.2em;
+}
+
+/*--- Desktop Settings ---*/
+@media screen and (min-width: 1000px) {
+
+    .square--red:first-of-type {
+        top: 20%;
+        right: 0%;
+        transform: rotate(45deg);
+        width: 250px;
+        height: 250px;
+        border: 1rem solid rgba(231, 76, 60, .7);
+        position: fixed;
+    }
+
+    .square--red:nth-of-type(2) {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        top: 10%;
+        left: 0%;
+        transform: rotate(30deg);
+        border: .5rem solid rgba(231, 76, 60, .5);
+    }
+
+    .square--redfull {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: rgba(231, 76, 60, .5);
+        transform: rotate(60deg);
+        left: 10%;
+        bottom: 0%;
+        z-index: 0;
+    }
+
+    .square--redfuller {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: rgba(231, 76, 60, .5);
+        transform: rotate(60deg);
+        right: 5%;
+        bottom: -20%;
+    }
+
+    .title {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 90%;
+    }
+
+    .title > h2 {
+        color: black;
+        width: 100%;
+        font-size: 1em;
+        text-align: center;
+        display: block;
+    }
+
+    #home-main {
+        background-color: #d2e5f2;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 30em 30em 1fr;
+        grid-template-rows: 40em 30em 1fr;
+        grid-template-areas:
+            ". one one ."
+            ". two three ."
+            ". . . .";
+    }
+
+    .container a:first-of-type {
+        grid-area: one;
+        border: 3em solid rgba(140, 164, 232, 0.5);
+    }
+
+    .container a:nth-last-of-type(2) {
+        grid-area: two;
+        border: 3em solid rgba(232, 223, 140, 0.5);
+    }
+
+    .container a:last-of-type {
+        grid-area: three;
+        border: 3em solid rgba(248, 87, 87, 0.5);
+    }
+
+    .main-article1,
+    .main-article2 {
+        width: 1000px;
+    }
+
+    .mobile-image {
+        max-width: 100%;
+        height: 100%;
+    }
+
+    .main-image h2 {
+        font-size: 4rem;
+    }
+
+    .main-image {
+        background-image: url("../images/jpg-img/godbanen-main.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+
+    .second-image {
+        background-image: url("../images/jpg-img/hellovintage-main.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .third-image {
+        background-image: url("../images/jpg-img/train-main.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    /*--- Footer ---*/
+    footer {
+        padding: 1em 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .social {
+        display: flex;
+        justify-content: space-around;
+        margin: 0.5em 1em;
+    }
+
+    .social > a > img {
+        max-width: 50%;
+    }
+
+    .copyright {
+        display: flex;
+    }
+
+    .copyright span {
+        align-self: center;
+    }
+
+    .summary {
+        margin: 1em 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .summary > iframe {
+        max-width: 45%;
+        width: 45%;
+    }
+
+    .summary > p {
+        width: 100%;
+        margin: 0 4%;
+    }
+
+    #summary_unique > p {
+        width: 100%;
+    }
+
+    .main-article1 iframe {
+        width: 45%;
+        height: 25em;
+    }
+
+
+    .article_background {
+        width: 100%;
+        height: 20em;
+    }
+
+    .facts_title {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.5em;
+    }
+
+}
